@@ -18,7 +18,7 @@ namespace ImageProcessing.Consol
         {
             Bitmap bmp = new Bitmap("E:\\test\\sample\\car.jpg");
             IImageProcessing imageProcessing = new Library.ImageProcessing();
-            var x = imageProcessing.ToMainColorsAsync(bmp);
+            var x = imageProcessing.ToMainColors(bmp);
             x.Image.Save(Path.Combine(@"E:\test\modified", "lenabmp.bmp"));
             Console.WriteLine(x.Time.Milliseconds.ToString());
             Console.ReadLine();

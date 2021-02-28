@@ -85,8 +85,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ImageProcessing.Library\ImageProcessing.Library.csproj">
-      <Project>{bfa3ee63-ef0e-458a-82bd-d64ff2b77c75}</Project>
+    <ProjectReference Include="..\ImageProcessing.Library\ImageProcessing.Library.csproj">
+      <Project>{ce94d300-4d8d-46c4-b260-957e4019b37b}</Project>
       <Name>ImageProcessing.Library</Name>
     </ProjectReference>
   </ItemGroup>
