@@ -7,3 +7,5 @@ C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.
 C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.Console\obj\Debug\ImageProcessing.Console.csproj.CopyComplete
 C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.Console\obj\Debug\ImageProcessing.Console.exe
 C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.Console\obj\Debug\ImageProcessing.Console.pdb
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.Console\bin\Debug\ImageProcessing.Library.dll
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.Console\bin\Debug\ImageProcessing.Library.pdb

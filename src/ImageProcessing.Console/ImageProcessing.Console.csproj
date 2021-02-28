@@ -84,5 +84,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ImageProcessing.Library\ImageProcessing.Library.csproj">
+      <Project>{bfa3ee63-ef0e-458a-82bd-d64ff2b77c75}</Project>
+      <Name>ImageProcessing.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
