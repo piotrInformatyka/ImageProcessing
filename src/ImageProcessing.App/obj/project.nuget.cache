@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kVrc3Q3hoFHVg2GRbPcDJdy5d9ohTkUp/anHIbw357Qa6x3iisOC61lCJXGOYyr+c88xELnXoO+ZIEvXAb4BDA==",
+  "dgSpecHash": "gjy7ecxcKuXjX6+ybVxzvghnA7F11TDM3j4ZQJZdU4WfnUgVgCBe8QjdAylQmADB/H54f1YpB4DoVmqjLxVzlg==",
   "success": true,
   "projectFilePath": "C:\\Users\\piotr\\source\\repos\\ImageProcessing\\ImageProcessing\\src\\ImageProcessing.App\\ImageProcessing.App.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\piotr\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\piotr\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\piotr\\.nuget\\packages\\system.drawing.common\\5.0.1\\system.drawing.common.5.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

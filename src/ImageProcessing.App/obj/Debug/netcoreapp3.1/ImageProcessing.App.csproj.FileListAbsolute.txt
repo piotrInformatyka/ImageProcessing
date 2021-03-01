@@ -17,3 +17,14 @@ C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.
 C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\obj\Debug\netcoreapp3.1\ImageProcessing.App.dll
 C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\obj\Debug\netcoreapp3.1\ImageProcessing.App.pdb
 C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\obj\Debug\netcoreapp3.1\ImageProcessing.App.genruntimeconfig.cache
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\obj\Debug\netcoreapp3.1\Views\ImageProcessingView.g.cs
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\obj\Debug\netcoreapp3.1\Views\ImageProcessingView.baml
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\bin\Debug\netcoreapp3.1\ImageProcessing.Library.dll
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\bin\Debug\netcoreapp3.1\ImageProcessing.Library.pdb
+C:\Users\piotr\source\repos\ImageProcessing\ImageProcessing\src\ImageProcessing.App\obj\Debug\netcoreapp3.1\ImageProcessing.App.csproj.CopyComplete

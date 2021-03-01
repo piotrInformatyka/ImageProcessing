@@ -24,7 +24,7 @@ namespace ImageProcessing.Library
 
             _stopwatch.Stop();
             TimeSpan ts = _stopwatch.Elapsed;
-
+            _stopwatch.Reset();
             return new ToMainColorsResult
             {
                 Image = image,
@@ -41,7 +41,7 @@ namespace ImageProcessing.Library
 
             _stopwatch.Stop();
             TimeSpan ts = _stopwatch.Elapsed;
-
+            _stopwatch.Reset();
             return new ToMainColorsResult
             {
                 Image = image,

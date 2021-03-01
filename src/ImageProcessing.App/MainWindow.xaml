@@ -4,45 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ImageProcessing.App"
+        xmlns:viewmodels ="clr-namespace:ImageProcessing.App.ViewModels"
+        xmlns:views ="clr-namespace:ImageProcessing.App.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Top" Background="LightBlue" Height="40" Orientation="Horizontal">
-            <Label Margin="10,0,0,0" Height="23">
-                Ścieżka pliku:
-            </Label>
-            <Label Margin="5,0,0,0" Height="25" Name="FileNameLabel" Width="300"/>
-            <Button Margin="5,0,0,0" Height="23" Name="BrowseButton" Width="75">
-                Wybierz
-            </Button>
-            <Button Margin="5,0,0,0" Height="23"  Width="100">
-                Synchronicznie
-            </Button>
-            <Button Margin="5,0,0,0" Height="23"  Width="100">
-                Asynchronicznie
-            </Button>
-        </StackPanel>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Image Source="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png"
-                   Grid.Column="0" Margin="10"/>
-            <Image Source="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png" 
-                   Grid.Column="1" Margin="10"/>
-            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
-                <Label>Czas synchronicznie: </Label>
-                <Label>Text</Label>
-            </StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
-                <Label>Czas asynchronicznie:</Label>
-                <Label>Text</Label>
-            </StackPanel>
-        </Grid>
-    </DockPanel>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewmodels:ImageProcessingViewModel}">
+            <views:ImageProcessingView DataContext="{Binding}"/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ContentControl Content="{Binding}"/>
+    </Grid>
 </Window>

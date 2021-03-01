@@ -7,6 +7,7 @@ using System.Text;
 
 namespace ImageProcessing.Library
 {
+    //ImageProcessor is abstract class in TemplateMethod for synchronous and parallel algorithms
     public abstract class ImageProcessor
     {
         protected BitmapData bmpData;
@@ -24,6 +25,7 @@ namespace ImageProcessing.Library
 
             System.Runtime.InteropServices.Marshal.Copy(ptr, rgbValues, 0, bytes);
 
+            //Parallel or synchronous image processing
             kernel();
 
             System.Runtime.InteropServices.Marshal.Copy(rgbValues, 0, ptr, bytes);
