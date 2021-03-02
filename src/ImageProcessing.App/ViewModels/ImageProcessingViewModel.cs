@@ -42,7 +42,5 @@ namespace ImageProcessing.App.ViewModels
         {
             ImageProcessing.SynchronousImageProcessing();
         }
-
-
     }
 }
