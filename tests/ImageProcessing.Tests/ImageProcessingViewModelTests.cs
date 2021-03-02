@@ -11,7 +11,7 @@ namespace ImageProcessing.Tests
     class ImageProcessingViewModelTests
     {
         [Test]
-        public void open_file_should_set_selectedPath()
+        public void openFile_should_setSelectedPath()
         {
             string expected = "path";
             Mock<IFileOpener> mock = new Mock<IFileOpener>();
@@ -23,7 +23,7 @@ namespace ImageProcessing.Tests
             Assert.True(expected == target.SelectedPath);
         }
         [Test]
-        public void providing_incorrect_path_should_fail()
+        public void providingIncorrectPath_should_Fail()
         {
             Mock<IFileOpener> mock = new Mock<IFileOpener>();
             ImageProcessingViewModel target = new ImageProcessingViewModel(mock.Object);
