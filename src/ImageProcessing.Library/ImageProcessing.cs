@@ -54,7 +54,7 @@ namespace ImageProcessing.Library
         {
             _stopwatch.Start();
 
-            ImageProcessor imageProcessor = new SyncImageProcessor();
+            ImageProcessor imageProcessor = new SyncGrayscaleProcessor();
             var image = imageProcessor.ToMainColor(bmp);
 
             _stopwatch.Stop();

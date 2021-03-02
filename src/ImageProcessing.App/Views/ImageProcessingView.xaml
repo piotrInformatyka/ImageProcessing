@@ -7,19 +7,27 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel>
-        <StackPanel DockPanel.Dock="Top" Background="LightBlue" Height="40" Orientation="Horizontal">
+        <StackPanel DockPanel.Dock="Top" Background="LightBlue" Height="50" Orientation="Horizontal">
             <Label Margin="10,0,0,0" Height="23">
                 Ścieżka pliku:
             </Label>
-            <Label Margin="5,0,0,0" Height="25" Name="FileNameLabel" Width="300" Content="{Binding SelectedPath}"/>
+            <Label Margin="5,0,0,0" Height="25" Name="FileNameLabel" Width="280" Content="{Binding SelectedPath}"/>
             <Button Margin="5,0,0,0" Height="23" Name="BrowseButton" Width="75" Click="BrowseButton_Click">
                 Wybierz
             </Button>
-            <Button Margin="5,0,0,0" Height="23"  Width="100" Name="SyncProcessingButton" Click="SyncProcessingButton_Click">
-                Synchronicznie
+            <StackPanel>
+                <Button Margin="5,3,0,0" Height="23"  Width="100" Name="SyncProcessingButton" Click="SyncProcessingButton_Click">
+                    Synchronicznie
+                </Button>
+                <Button Margin="5,3,0,0" Height="20"  Width="100" Name="AsyncProcessingButton" Click="AsyncProcessingButton_Click">
+                    Asynchronicznie
+                </Button>
+            </StackPanel>
+            <Button Margin="5,3,0,0" Height="20"  Width="75" Name="GrayscaleProcessing" Click="GrayscaleProcessing_Click">
+                Grayscale
             </Button>
-            <Button Margin="5,0,0,0" Height="23"  Width="100" Name="AsyncProcessingButton" Click="AsyncProcessingButton_Click">
-                Asynchronicznie
+            <Button Margin="5,3,0,0" Height="20"  Width="125" Name="EdgeDetectionProcessing" Click="EdgeDetectionProcessing_Click">
+                Wykrywanie krawędzi
             </Button>
         </StackPanel>
         <Grid DataContext="{Binding ImageProcessing}" x:Name="grid">

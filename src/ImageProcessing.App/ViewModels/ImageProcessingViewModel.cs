@@ -42,5 +42,13 @@ namespace ImageProcessing.App.ViewModels
         {
             ImageProcessing.SynchronousImageProcessing();
         }
+        public void GrayscaleImageProcessing()
+        {
+            ImageProcessing.GrayscaleImageProcessing();
+        }
+        public void EdgeDetectionProcessing()
+        {
+            ImageProcessing.EdgeDetectionProcessing();
+        }
     }
 }

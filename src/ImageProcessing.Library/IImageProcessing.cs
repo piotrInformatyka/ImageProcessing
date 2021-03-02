@@ -9,5 +9,7 @@ namespace ImageProcessing.Library
     {
         ToMainColorsResult ToMainColors(Bitmap bmp);
         ToMainColorsResult ToMainColorsAsync(Bitmap bmp);
+        ToMainColorsResult EdgeDetection(Bitmap bmp);
+        ToMainColorsResult ToGrayscale(Bitmap bmp);
     }
 }

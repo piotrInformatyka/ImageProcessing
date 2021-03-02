@@ -42,5 +42,17 @@ namespace ImageProcessing.App.Views
             var program = DataContext as ImageProcessingViewModel;
             program.SynchronousImageProcessing();
         }
+
+        private void GrayscaleProcessing_Click(object sender, RoutedEventArgs e)
+        {
+            var program = DataContext as ImageProcessingViewModel;
+            program.GrayscaleImageProcessing();
+        }
+
+        private void EdgeDetectionProcessing_Click(object sender, RoutedEventArgs e)
+        {
+            var program = DataContext as ImageProcessingViewModel;
+            program.EdgeDetectionProcessing();
+        }
     }
 }

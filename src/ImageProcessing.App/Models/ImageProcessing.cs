@@ -46,10 +46,7 @@ namespace ImageProcessing.App.Models
             {
                 var bmp = OriginalImage.BitmapImage2Bitmap();
                 var result = _imageProcessing.ToMainColorsAsync(bmp);
-                ModifiedImage = result.Image.Bitmap2BitmapImage();
-                AsynchronousTime = result.Time.TotalMilliseconds.ToString() + " ms";
-                OnPropertyChanged("ModifiedImage");
-                OnPropertyChanged("AsynchronousTime");
+                UpdateImage(result);
             }
         }
         public void SynchronousImageProcessing()
@@ -58,10 +55,25 @@ namespace ImageProcessing.App.Models
             {
                 var bmp = OriginalImage.BitmapImage2Bitmap();
                 var result = _imageProcessing.ToMainColors(bmp);
-                ModifiedImage = result.Image.Bitmap2BitmapImage();
-                SynchronousTime = result.Time.TotalMilliseconds.ToString() + " ms";
-                OnPropertyChanged("ModifiedImage");
-                OnPropertyChanged("SynchronousTime");
+                UpdateImage(result);
+            }
+        }
+        public void GrayscaleImageProcessing()
+        {
+            if (OriginalImage != null)
+            {
+                var bmp = OriginalImage.BitmapImage2Bitmap();
+                var result = _imageProcessing.ToGrayscale(bmp);
+                UpdateImage(result);
+            }
+        }
+        public void EdgeDetectionProcessing()
+        {
+            if (OriginalImage != null)
+            {
+                var bmp = OriginalImage.BitmapImage2Bitmap();
+                var result = _imageProcessing.EdgeDetection(bmp);
+                UpdateImage(result);
             }
         }
         private void ResetTextLabels()
@@ -69,6 +81,13 @@ namespace ImageProcessing.App.Models
             AsynchronousTime = "Wykonaj operację";
             SynchronousTime = "Wykonaj operację";
             OnPropertyChanged("AsynchronousTime");
+            OnPropertyChanged("SynchronousTime");
+        }
+        private void UpdateImage(ToMainColorsResult result)
+        {
+            ModifiedImage = result.Image.Bitmap2BitmapImage();
+            SynchronousTime = result.Time.TotalMilliseconds.ToString() + " ms";
+            OnPropertyChanged("ModifiedImage");
             OnPropertyChanged("SynchronousTime");
         }
 
