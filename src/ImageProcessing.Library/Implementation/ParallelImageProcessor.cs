@@ -30,20 +30,17 @@ namespace ImageProcessing.Library.Implementation
                             rgbValues[counter + 1] = 255;
                         }
                     }
+                    else if (rgbValues[counter] > rgbValues[counter - 1])
+                    {
+                        rgbValues[counter] = 255;
+                        rgbValues[counter - 1] = 0;
+                        rgbValues[counter + 1] = 0;
+                    }
                     else
                     {
-                        if (rgbValues[counter] > rgbValues[counter - 1])
-                        {
-                            rgbValues[counter] = 255;
-                            rgbValues[counter - 1] = 0;
-                            rgbValues[counter + 1] = 0;
-                        }
-                        else
-                        {
-                            rgbValues[counter] = 0;
-                            rgbValues[counter - 1] = 255;
-                            rgbValues[counter + 1] = 0;
-                        }
+                        rgbValues[counter] = 0;
+                        rgbValues[counter - 1] = 255;
+                        rgbValues[counter + 1] = 0;
                     }
                 }
             });

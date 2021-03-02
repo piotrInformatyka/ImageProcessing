@@ -1,4 +1,5 @@
-﻿using ImageProcessing.App.ViewModels;
+﻿using ImageProcessing.App.Services;
+using ImageProcessing.App.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace ImageProcessing.App
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new ImageProcessingViewModel();
+            DataContext = new ImageProcessingViewModel(new FileOpener());
         }
     }
 }

@@ -31,9 +31,11 @@ namespace ImageProcessing.Library
                 Time = ts
             };
         }
-
+        
         public ToMainColorsResult ToMainColorsAsync(Bitmap bmp)
         {
+            //It is not asynchronous method just it uses parallelism in image processing
+
             _stopwatch.Start();
 
             ImageProcessor imageProcessor = new ParallelImageProcessor();

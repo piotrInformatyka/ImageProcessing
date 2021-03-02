@@ -20,13 +20,14 @@ namespace ImageProcessing.App.Models
         public string AsynchronousTime { get; set; }
         public string SynchronousTime { get; set; }
 
-        public ImageProcessingModel()
+        public ImageProcessingModel(IImageProcessing imageProcessing)
         {
-            _imageProcessing = new Library.ImageProcessing();
+            _imageProcessing = imageProcessing;
             ResetTextLabels();
         }
         public void LoadImage(string path)
         {
+            ResetTextLabels();
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
             bitmap.UriSource = new Uri(path);
@@ -38,7 +39,6 @@ namespace ImageProcessing.App.Models
                 OnPropertyChanged("ModifiedImage");
             }
             OnPropertyChanged("OriginalImage");
-            ResetTextLabels();
         }
         public void ParallelImageProcessing()
         {
@@ -47,7 +47,7 @@ namespace ImageProcessing.App.Models
                 var bmp = OriginalImage.BitmapImage2Bitmap();
                 var result = _imageProcessing.ToMainColorsAsync(bmp);
                 ModifiedImage = result.Image.Bitmap2BitmapImage();
-                AsynchronousTime = result.Time.Milliseconds.ToString();
+                AsynchronousTime = result.Time.TotalMilliseconds.ToString() + " ms";
                 OnPropertyChanged("ModifiedImage");
                 OnPropertyChanged("AsynchronousTime");
             }
@@ -59,7 +59,7 @@ namespace ImageProcessing.App.Models
                 var bmp = OriginalImage.BitmapImage2Bitmap();
                 var result = _imageProcessing.ToMainColors(bmp);
                 ModifiedImage = result.Image.Bitmap2BitmapImage();
-                SynchronousTime = result.Time.Milliseconds.ToString();
+                SynchronousTime = result.Time.TotalMilliseconds.ToString() + " ms";
                 OnPropertyChanged("ModifiedImage");
                 OnPropertyChanged("SynchronousTime");
             }

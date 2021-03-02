@@ -1,4 +1,5 @@
 ﻿using ImageProcessing.App.Models;
+using ImageProcessing.App.Services;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -10,32 +11,28 @@ namespace ImageProcessing.App.ViewModels
    public class ImageProcessingViewModel : ObservableObject
     {
         private string _selectedPath;
-        private string _defaultPath;
+        private IFileOpener _fileOpener;
         public ImageProcessingModel ImageProcessing { get; set; }
         public string SelectedPath
         {
             get { return _selectedPath; }
             set { _selectedPath = value; OnPropertyChanged("SelectedPath"); }
         }
-        public ImageProcessingViewModel()
+        public ImageProcessingViewModel(IFileOpener fileOpener)
         {
-            _defaultPath = "c:\\";
-            ImageProcessing = new ImageProcessingModel();
+            ImageProcessing = new ImageProcessingModel(new Library.ImageProcessing());
+            _fileOpener = fileOpener;
         }
         public void OpenFile()
         {
-            OpenFileDialog dlg = new OpenFileDialog
+            string filePath = _fileOpener.OpenImageDialog();
+            if (!String.IsNullOrEmpty(filePath))
             {
-                InitialDirectory = _defaultPath,
-                Filter = "Image files (*.bmp;*.jpg;*.png)|*.bmp;*.jpg;*.png|All files(*.*)|*.*",
-                RestoreDirectory = true
-            };
-            if (dlg.ShowDialog() == true)
-            {
-                string selectedFileName = dlg.FileName;
-                SelectedPath = selectedFileName;
-                ImageProcessing.LoadImage(selectedFileName);
+                SelectedPath = filePath;
+                ImageProcessing.LoadImage(filePath);
             }
+            else
+                throw new Exception("Invalid file format or path");
         }
         public void ParallelImageProcessing()
         {
